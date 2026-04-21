@@ -1208,7 +1208,6 @@ function LibClass:loadConfig(name)
 		local decoded = self:_decodeConfigValue(entry, values[entry.key])
 		local okApply = pcall(entry.apply, decoded, true)
 		if not okApply then
-			-- Keep loading the remaining controls even if one callback fails.
 		end
 	end
 
@@ -2936,3 +2935,4 @@ function LibClass:notify(title, subtitle, imageId, persistent)
 end
 
 return LibClass
+--AKLIB w config
